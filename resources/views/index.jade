@@ -28,14 +28,25 @@ block main
   section.schedule.space
     .container
       form.row.booking(action="#")
-        - for(var x=0; x<3; x++)
-          .col-lg-3.col-md-4.col-sm-4.item-wraper
-            .item
-              .title Datum příjezdu
-              select.selectpicker.w-100
-                option 12 / června
-                option Ketchup
-                option Relish
+        .col-lg-3.col-md-4.col-sm-4.item-wraper
+          .item
+            .title Datum příjezdu
+            label.d-flex.align-items-center.date-label(for="date-start")  
+              input#date-start.form_datetime.w-100(type='text' value='12 / června' readonly)
+              <i class="far fa-angle-down"></i>
+        .col-lg-3.col-md-4.col-sm-4.item-wraper
+          .item
+            .title Datum příjezdu
+            label.d-flex.align-items-center.date-label(for="date-end")  
+              input#date-end.form_datetime.w-100(type='text' value='12 / června' readonly)
+              <i class="far fa-angle-down"></i>      
+        .col-lg-3.col-md-4.col-sm-4.item-wraper
+          .item
+            .title Datum příjezdu
+            select.selectpicker.w-100
+              option 04
+              option 06
+              option 08        
 
         .item-wraper.col-lg-3.col-col-12.bg-red.d-flex.justify-content-center.align-items-center.px-4
           a.btn.button.text-nowrap.px-0.d-block.w-100(href="#") Zkontrolovat dostupnost      

@@ -53,6 +53,7 @@
     .item {
       border-left: 1px solid #353b48;
       padding: 0 1.5rem;
+      height: 100%;
       @include sm {
         border-color: transparent;
       }
@@ -81,6 +82,30 @@
       padding-bottom: 15px;
     }
   }
+  .date-label {
+    margin-top: 10px;
+    margin-right: 20px;
+    @include sm {
+      margin-right: 0;
+    }
+    i {
+      border: none;
+      font-weight: 400;
+      font-family: "Font Awesome 5 Pro";
+      content: "\f107";
+      font-size: 30px;
+      position: relative;
+      top: 3px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+  }
+  .form_datetime {
+    font-size: 24px;
+    font-family: $p;
+    background: none;
+    border: none;
+  }
   .bootstrap-select > {
     .dropdown-toggle {
       font-size: 24px;
@@ -88,6 +113,7 @@
       background: none;
       padding-left: 0;
       padding-right: 0;
+      border: none;
       &:after {
         border: none;
         font-weight: 400;
