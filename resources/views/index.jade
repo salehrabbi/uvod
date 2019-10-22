@@ -4,4 +4,90 @@ block title
   title Home
 
 block main
+  section.banner.position-relative
+    .banner-slider
+      - for(var x=1; x<5; x++)
+        .slide(style="background-image: url(dist/images/banner.png)")
+    .custom.position-relative
+      .container
+        .row
+          .col-12
+            .section-heading.white
+              div.mx-auto(style="width: 1px; height: 64px;background-color: #e1c16d;")
+              span Botel Albatros
+              h2 Ubytování v Praze za nejlepší cenu
+        .row.justify-content-center
+          each val, index in ['Ubytování se snídaní', 'Transfery hostů', 'Parkování před hotelem', 'Společneské akce', '24hodinová recepce']
+            .col-lg.col-md-3.col-sm-4.text-center
+              .item
+                .img.d-flex.justify-content-center.align-items-center 
+                  div
+                    img(src="dist/images/i-"+ index +".png" alt="")   
+                .text
+                  a.title(href="#")= val     
+  section.schedule.space
+    .container
+      form.row.booking(action="#")
+        - for(var x=0; x<3; x++)
+          .col-lg-3.col-md-4.col-sm-4.item-wraper
+            .item
+              .title Datum příjezdu
+              select.selectpicker.w-100
+                option 12 / června
+                option Ketchup
+                option Relish
 
+        .item-wraper.col-lg-3.col-col-12.bg-red.d-flex.justify-content-center.align-items-center.px-4
+          a.btn.button.text-nowrap.px-0.d-block.w-100(href="#") Zkontrolovat dostupnost      
+    .container
+      .row
+        .col-12
+          .section-heading
+            span Botel Albatros
+            h2 Ubytování v Praze za nejlepší cenu
+            p.mx-auto(style="max-width: 914px") Tříhvězdičkový Botel Albatros se nachází na vynikající lokalitě a to přímo v historickém centru Prahy a nabízí návštěvníkům levné a příjemné ubytování. 
+      .time
+        .time-table.text-card
+          .sub-heading
+            img(src="dist/images/spoon.png" alt="")
+            h3 Restaurace
+            p.m-0 Ubytování se snídaní od 7:00 – 10:00 formou bufetu.
+          .text.text-center
+            .mb-4  
+              h4 Restaurace s kapacitou 84 míst
+              p Botel Albatros Vás zve do své nové, stylově zařízené restaurace, která nabízí speciality české a zahraniční kuchyně. Svou kapacitou 84 míst je botel Albatros v Praze ideálním prostředím pro konání rodinných oslav, firemních večírků, svateb, společenských rautů apod.
+            .mb-4    
+              h4 VIP salonek s kapacitou 12 míst
+              p Pro akce, při kterých je kladen důraz na komornější prostředí, je připraven VIP salonek s kapacitou 12 míst, který na Vás dýchne osobitou atmosférou lodní kajuty s romantickým výhledem na řeku Vltavu a Letenské sady.
+            .mb-4    
+              h4 Bar - kapacita 36 míst
+              p Příjemné posezení (36 míst) nabízí i bar botelu Albatros. Romantické prostředí, velká nabídka alkoholických i nealkoholických nápojů, ochotná obsluha, speciality české i zahraniční kuchyně zaručují příjemně prožitý den s rodinou nebo přáteli.
+            .mb-4    
+              h4 Letní terasa s výhledem na Pražský hrad
+              p V letních měsících je možno posedět na zastřešené venkovní terase, která poskytuje krásný výhled na Pražský hrad, historické památky a projíždějící výletní lodě, které celoročně plují po řece Vltavě kolem botelu Albatros.
+            .d-flex.justify-content-center.justify-content-md-between.mx-auto.flex-wrap.mt-5(style="max-width: 348px")
+              a.btn.button.mb-3(href="#") Jídelní lístek  
+              a.btn.button.mb-3(href="#") Ukázka polopenze
+        .time-image(style="background: url(dist/images/time.png) center;background-size: cover;")
+  section.section-slider-wraper.position-relative
+    .section-slider
+      - for(var x=1; x<5; x++)
+        .item(style="background-image: url(dist/images/BG_Photo.png)")
+    .container
+      .sub-heading.text-card.mx-auto(style="max-width: 840px;")
+        img(src="dist/images/spoon.png" alt="")
+        h3 Ubytování
+        p.pb-3 Náš Botel Albatros je svoji unikátní polohou přímo v centru Prahy a nabízí tak zajímavější lokalitu než některé drahé hotely v Praze. Náš botel pro vás nabízí 83 dvoulůžkových kajut a tři apartmány. Check in 14:00 hodin, Check out: 12:00 hodin. Recepce otevřena 24 hodin.
+        div.mt-4
+          a.btn.button(href="#") Více informací
+  section.inner-slider-wraper
+    .container.position-relative
+      .inner-slider
+        - for(var x=1; x<5; x++)
+          .item(style="background-image: url(dist/images/inner.png)") 
+      .sub-heading.text-card.mx-auto(style="max-width: 600px;")
+        img(src="dist/images/spoon.png" alt="")
+        h3 Okolí
+        p.pb-3 V jeho blízkosti poznáte krásu historických památek jako například Staroměstké náměstí se svou dominantou Pražským orlojem.
+        div.mt-4
+          a.btn.button(href="#") Více informací      

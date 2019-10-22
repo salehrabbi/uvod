@@ -1,0 +1,156 @@
+* {
+  outline: 0 !important;
+}
+body {
+  font-family: $f;
+  color: #353b48;
+}
+main {
+  background: url(../images/pozadimensi.png);
+  background-attachment: fixed;
+}
+
+p {
+  font-size: 14px;
+  line-height: (21/14);
+}
+img {
+  max-width: 100%;
+}
+h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.space {
+  padding: 140px 0;
+  @include md {
+    padding: 60px 0;
+  }
+}
+.section-heading {
+  font-family: $p;
+  text-align: center;
+  margin-bottom: 120px;
+  @include md {
+    margin-bottom: 60px;
+  }
+  span {
+    font-family: $f;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 0;
+    font-size: 40px;
+    @include sm {
+      font-size: 30px;
+    }
+    &:after {
+      content: "";
+      border-bottom: 1px solid #e1c160;
+      width: 120px;
+      margin: 0 auto;
+      display: block;
+      margin-top: 30px;
+    }
+  }
+  p {
+    margin: 0;
+    margin-top: 40px;
+  }
+  &.white {
+    color: #fff;
+    margin-bottom: 80px;
+    @include lg {
+      margin-bottom: 50px;
+    }
+    h2 {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.sub-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  img {
+    margin-bottom: 18px;
+  }
+  h3 {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    &:after {
+      content: "";
+      border-bottom: 1px solid #e1c160;
+      width: 120px;
+      margin: 0 auto;
+      display: block;
+      margin-top: 25px;
+      margin-bottom: 27px;
+    }
+  }
+}
+
+.button {
+  background-color: #63110b;
+  border-radius: 0;
+  color: #fff;
+  line-height: 1;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 14px 27px;
+  transition: 0.3s;
+  &:hover {
+    background: #e1c160;
+  }
+}
+
+.bg {
+  &-white {
+    background: #fff;
+  }
+  &-red {
+    background-color: #63110b;
+  }
+}
+
+.text-card {
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e1c160;
+  background-color: #ffffff;
+  padding: 40px 35px;
+  @include sm {
+    padding: 25px 15px;
+  }
+}
+
+.slick-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: #63110b;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  margin-top: -20px;
+  z-index: 5;
+  @include sm {
+    left: -15px;
+  }
+  &.fa-angle-right {
+    left: auto;
+    right: -20px;
+    @include sm {
+      right: -15px;
+    }
+  }
+}

@@ -1,0 +1,207 @@
+// ================================= banner
+.banner {
+  .custom {
+    background-color: rgba(#000000, 0.51);
+    padding: 70px 0;
+    padding-bottom: 200px;
+  }
+  .item {
+    padding: 20px 0;
+    .img {
+      height: 85px;
+    }
+    .title {
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+.banner-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  .slide {
+    background-size: cover;
+  }
+  .slick-list,
+  .slick-track,
+  .slide {
+    height: 100%;
+  }
+}
+// ======================== .booking
+.booking {
+  background: #fff;
+  margin-top: -29vh;
+  position: relative;
+  margin-bottom: 140px;
+  @include lg {
+    margin-bottom: 80px;
+  }
+  @media (min-width: 1366px) {
+    margin-top: -19.5%;
+  }
+  z-index: 2;
+  .item-wraper {
+    padding: 1.5rem 0;
+    @include sm {
+      padding: 15px 0;
+    }
+    .item {
+      border-left: 1px solid #353b48;
+      padding: 0 1.5rem;
+      @include sm {
+        border-color: transparent;
+      }
+    }
+    &:first-child {
+      .item {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .button {
+    background: #fff;
+    color: #63110b;
+    &:hover {
+      background: #e1c160;
+      color: #000;
+    }
+  }
+
+  .title {
+    font-size: 10px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    @include sm {
+      padding-bottom: 15px;
+    }
+  }
+  .bootstrap-select > {
+    .dropdown-toggle {
+      font-size: 24px;
+      font-family: $p;
+      background: none;
+      padding-left: 0;
+      padding-right: 0;
+      &:after {
+        border: none;
+        font-weight: 400;
+        font-family: "Font Awesome 5 Pro";
+        content: "\f107";
+        font-size: 30px;
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+}
+
+.btn-light:not(:disabled):not(.disabled).active:focus,
+.btn-light:not(:disabled):not(.disabled):active:focus,
+.show > .btn-light.dropdown-toggle:focus,
+.btn-light:focus {
+  box-shadow: none;
+}
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select > select.mobile-device:focus + .dropdown-toggle {
+  outline: 0 !important;
+}
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled):active,
+.show > .btn-light.dropdown-toggle,
+.btn-light:hover {
+  color: #212529;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+// ============================ schedule
+.schedule {
+  padding-bottom: (140px+72);
+
+  @include md {
+    padding-bottom: (60px+72);
+  }
+}
+.time {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  .time-table {
+    grid-column: 1/8;
+    grid-row: 1/2;
+    z-index: 2;
+    @include md {
+      grid-column: 1/11;
+    }
+  }
+  .time-image {
+    grid-column: 6/13;
+    grid-row: 1/2;
+    top: 70px;
+    position: relative;
+    @include md {
+      grid-column: 3/13;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// ============================= section-slider
+.section-slider-wraper {
+  .text-card {
+    position: relative;
+    z-index: 2;
+    margin-top: -28vh;
+    margin-bottom: 0;
+    @media (min-width: 1366px) {
+      margin-top: -17%;
+    }
+  }
+}
+.section-slider {
+  .item {
+    min-height: 736px;
+    background-size: cover;
+    @include md {
+      min-height: 450px;
+    }
+  }
+}
+
+// ===================================== inner-slider
+.inner-slider-wraper {
+  padding-top: 192px;
+  padding-bottom: 90px;
+  @include lg {
+    padding-top: 100px;
+  }
+  .text-card {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 30px);
+    margin-top: -28vh;
+    margin-bottom: 0;
+    @media (min-width: 1366px) {
+      margin-top: -17%;
+    }
+  }
+}
+.inner-slider {
+  .item {
+    min-height: 600px;
+    @include lg {
+      min-height: 500px;
+    }
+    @include md {
+      min-height: 400px;
+    }
+  }
+}
